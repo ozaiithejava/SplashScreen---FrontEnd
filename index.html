@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Splash Screen</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #splash-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+    }
+
+    #splash-content {
+      text-align: center;
+      color: #fff;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    #made-by {
+      color: #fff;
+      font-size: 12px;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .welcome-animation {
+      color: #fff;
+      font-size: 32px;
+      opacity: 0;
+      animation: welcome-animation 2s infinite;
+    }
+
+    @keyframes welcome-animation {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="splash-screen">
+    <div id="splash-content">
+      <h1>Loading...</h1>
+    </div>
+    <div class="welcome-animation">You are welcome</div>
+    <div id="made-by">Made by Ozaii</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
